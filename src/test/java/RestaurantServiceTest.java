@@ -63,4 +63,18 @@ class RestaurantServiceTest {
     // <<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING
     // RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    // <<<<<<<<<<<<<<<<<<<<FINDING TOTAL COST OF ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void total_cost_of_order_must_be_sum_of_all_items_picked_from_menu_multiple_items() {
+        //
+        assertEquals(388, service.findOrderValue(restaurant, "Sweet corn soup", "Vegetable lasagne"));
+    }
+
+    @Test
+    public void total_cost_of_order_must_be_sum_of_all_items_picked_from_menu_single_item() {
+        //
+        assertEquals(119, service.findOrderValue(restaurant, "Sweet corn soup"));
+    }
+    // <<<<<<<<<<<<<<<<<<<<FINDING TOTAL COST OF ORDER>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 }
